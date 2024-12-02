@@ -1,6 +1,18 @@
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+/*
+ * Color Palette TODO: change primary, secondary and tertiary colors
+ */
+/*
+    --bs-primary
+    --bs-primary-bg-subtle
+    --bs-primary-border-subtle
+    --bs-primary-text-emphasis
+
+
+*/
+
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -27,9 +39,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
+  margin: 0;  
   min-width: 320px;
   min-height: 100vh;
 }
