@@ -58,25 +58,29 @@ function BestOffers({ offers }: {offers: Offer[]}) {
 
 function Toolbar({ isLoggedIn = false }: {isLoggedIn: boolean}) {
 
-  return (<Navbar sticky="top">
+  return (<Navbar sticky="top" bg="body-tertiary">
+    <Container fluid>
+      <Navbar.Brand>Webstore</Navbar.Brand>
 
-    <Nav>
-      <Nav.Item>
-        <Nav.Link>
-          <i className="bi bi-person-circle"></i> {isLoggedIn ? "Account" : "Login" }
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link>
-          <i className="bi bi-cart3"></i> Cart
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link>
-          <i className="bi bi-gear"></i> Preferences
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
+      <Nav className="mr-auto justify-content-end">
+        <Nav.Item>
+          <Nav.Link>
+            <i className="bi bi-person-circle"></i> {isLoggedIn ? "Account" : "Login"}
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link>
+            <i className="bi bi-cart3"></i> Cart
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link>
+            <i className="bi bi-gear"></i> Preferences
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
+    </Container>
+    
 
     
   </Navbar>);
@@ -100,9 +104,7 @@ export default function App() {
 
     <Toolbar/>
 
-    <h1 className="display-1 border-bottom mb-2">Webshop</h1>
-
-    <main className="min-vh-60">
+    <main className="min-vh-60 mt-4">
       <Container className="h-25 mb-10 d-inline-block d-flex justify-content-center">
         <BestOffers offers={myBestOffers} />
       </Container>
